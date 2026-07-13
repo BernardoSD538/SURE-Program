@@ -25,7 +25,7 @@ This method uses LabVIEW's built in blocks to use python code. This are the Open
 This method uses LabVIEW libraries created by a Github user called Ivan. While Ivan's libraries have big applications on computer vision, we will only use and concentrate on those that help us open a ONNX file and make an inference with it. The general flow of the LabVIEW program consists of 3 parts: Preprocessing, Inference, and PostProcessing. Just like any prediction with AI models, for this example initial data was normalized, then given into the onnx model for inference, and post processed to get the real X and Y predicted values. The general structure of the VI is show in the image below. The structure of your code will change depending on you pre and post processing, but the Inference stays the same, ussing the Init.vi, PreProcess.vi and RunInference.vi blocks for a library to open the onnx file, read the input data, and do the inference, respectively. 
 
 <div align="center">
-    <img width="50%" height="50%" alt="Image" src="https://github.com/user-attachments/assets/4fafdf0d-29af-4362-b2c2-53a9b0a2b8a5" />
+    <img width="70%" height="70%" alt="Image" src="https://github.com/user-attachments/assets/4fafdf0d-29af-4362-b2c2-53a9b0a2b8a5" />
 </div>
 
 - Training Model
