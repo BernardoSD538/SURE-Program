@@ -1,0 +1,1 @@
+C:\Users\genyd\OneDrive\Documentos\Trabajos\Personales\SURE\ZEUS\Training data\trained_model.onnx
