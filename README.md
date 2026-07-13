@@ -36,5 +36,5 @@ This method uses LabVIEW libraries created by a Github user called Ivan. While I
 This specific code is designed to be able to use 32 bit LabVIEW with 64 bit Python, as the AI training libraries are only available in the 64 bit Python. This code works using a System Exec.vi block, whose purpuse is to send a command line to windows in order to run a desired python code capable of training an AI model and returning performance results, as well as the path of a ONNX file created for the model. It was also designed to be able to select between different arquitectures or models, using an Enum, Format Into String blocks, and argparse in python. The image below shows the expected results from this example (predictions are not correct, as it wasn't the focus for this project)
 
 <div align="center">
-    <img width="50%" height="50%" alt="Image" src="https://github.com/user-attachments/assets/6b2ff45c-3589-40b5-b947-0c5c616ee1ae" />
+    <img width="65%" height="65%" alt="Image" src="https://github.com/user-attachments/assets/6b2ff45c-3589-40b5-b947-0c5c616ee1ae" />
 </div>
