@@ -25,7 +25,7 @@ This method uses LabVIEW's built in blocks to use python code. This are the Open
 This method uses LabVIEW libraries created by a Github user called Ivan. While Ivan's libraries have big applications on computer vision, we will only use and concentrate on those that help us open a ONNX file and make an inference with it. The general flow of the LabVIEW program consists of 3 parts: Preprocessing, Inference, and PostProcessing. Just like any prediction with AI models, for this example initial data was normalized, then given into the onnx model for inference, and post processed to get the real X and Y predicted values. The general structure of the VI is show in the image below. The structure of your code will change depending on you pre and post processing, but the Inference stays the same, ussing the Init.vi, PreProcess.vi and RunInference.vi blocks for a library to open the onnx file, read the input data, and do the inference, respectively. 
 
 <div align="center">
-    <img alt="Image" src="https://github.com/user-attachments/assets/8dd82db2-c012-4b22-ae2d-cf815f0b2cec" />
+    <img width="60%" alt="Image" src="https://github.com/user-attachments/assets/8dd82db2-c012-4b22-ae2d-cf815f0b2cec" />
 </div>
 
 - Training Model
@@ -36,5 +36,5 @@ This method uses LabVIEW libraries created by a Github user called Ivan. While I
 This specific code is designed to be able to use 32 bit LabVIEW with 64 bit Python, as the AI training libraries are only available in the 64 bit Python. This code works using a System Exec.vi block, whose purpuse is to send a command line to windows in order to run a desired python code capable of training an AI model and returning performance results, as well as the path of a ONNX file created for the model. It was also designed to be able to select between different arquitectures or models, using an Enum, Format Into String blocks, and argparse in python. The image below shows the expected results from this example (predictions are not correct, as it wasn't the focus for this project)
 
 <div align="center">
-    <img alt="Image" src="https://github.com/user-attachments/assets/4a46f3fb-3ac6-415b-b96c-2db637a61599" />
+    <img width="60%" alt="Image" src="https://github.com/user-attachments/assets/4a46f3fb-3ac6-415b-b96c-2db637a61599" />
 </div>
