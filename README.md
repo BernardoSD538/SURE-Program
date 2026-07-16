@@ -1,6 +1,6 @@
 # Development of a Machine Learning–Based Laser Pointing Stabilization System for ZEUS
 
-## Creation of LabVIEW porgrams capable of using already trained AI model to predict X and Y coordinates, as well as LabVIEW program for training model via Python. 
+## Creation of LabVIEW programs capable of using already trained AI model to predict X and Y coordinates, as well as LabVIEW program for training model via Python. 
 
 This project has the objetive of implementing the use of an AI model to predcit values and be able to use them within LabVIEW. To achieve this purpuse two LabVIEW VIs were made as options: The Python Node method, and Ivan's method. Both are able to use an ONNX file of an already created model to predict X and Y values and show them in LabVIEW. A third LabVIEW VI was made with the purpuse of also being able to train AI model within LabVIEW and view performance results of the same. In the following text, a brief explanation of each VI will be given for general understanding of how each one works, but a more detailed Guide on how to make them is available for each VI inside their folder. 
 
