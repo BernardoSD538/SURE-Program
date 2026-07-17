@@ -13,7 +13,7 @@ This project has the objetive of implementing the use of an AI model to predcit 
 This method uses LabVIEW's built in blocks to use python code. This are the Open Python Session, Python Node, and Close Python Session blocks. The logic in LabVIEW is simple, you just need to open a python session, call the python code and its desired function via the Python Node, store the return values given by the python code somewhere, and finally close the python session. The image below shows the general working of this method. For this example, an ONNX file model was used. As you can see on the Python Node, you call the file path of your python file, and with a string constant you call the function you wish to use. You also need to establish the value type of the return your code is givig, in this case, a 2D array. You also need to wire your inputs for the code, for this example a csv file was used as input. 
 
 <div align="center">
-  <img alt="Image" src="https://github.com/user-attachments/assets/63d4724c-cf88-4c5b-b4cd-a77c1842d038" />
+  <img width="782" height="466" alt="Image" src="https://github.com/user-attachments/assets/463496ba-856e-4bac-8922-2fe6296cc8dc" />
 </div>
 
 - Ivan's method
