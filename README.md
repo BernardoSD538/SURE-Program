@@ -16,7 +16,7 @@ This method uses LabVIEW's built in blocks to use python code. This are the Open
   <img width="782" height="466" alt="Image" src="https://github.com/user-attachments/assets/463496ba-856e-4bac-8922-2fe6296cc8dc" />
 </div>
 
-- Ivan's method
+- Ivan's method NOTE: This code does not work correctly yet, it does not predict correctly, problem related to the shape in which the ONNX file recieves the input
     * Requirements:
         + [Ivan's repository link](https://github.com/IvanLisRus/LabVIEW-ONNX_Runtime)
         + 64 bit LabVIEW
