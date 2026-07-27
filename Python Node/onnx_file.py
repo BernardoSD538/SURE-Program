@@ -1,13 +1,13 @@
 import numpy as np
 import onnxruntime as ort
 import os
-import time  # <--- STEP 1: Import the time module
+import time
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 1. Initialize the ONNX session
-onnx_path = os.path.join(script_dir, "zeus_laser_tracker.onnx")
+# 1. Initialize the ONNX session (UPDATED: Using the fixed model file)
+onnx_path = os.path.join(script_dir, "zeus_laser_tracker_fixed.onnx")
 session = ort.InferenceSession(onnx_path)
 
 # 2. Load the scaling parameters
@@ -20,7 +20,7 @@ def predict_coordinates(lv_array_2d):
     """
     lv_array_2d: Raw X and Y coordinates directly from LabVIEW
     """
-    start_time = time.perf_counter()  # <--- STEP 2: Start high-resolution timer
+    start_time = time.perf_counter()
     
     # 1. Reconstruct the 2D matrix layout from LabVIEW
     raw_flat = np.array(lv_array_2d, dtype=np.float32).flatten()
@@ -39,17 +39,17 @@ def predict_coordinates(lv_array_2d):
     input_tensor = np.expand_dims(standardized_data, axis=0).astype(np.float32)
     
     # 5. Execute ONNX Inference
-    outputs = session.run(['predicted_xy'], {'input_timeline': input_tensor})
+    outputs = session.run(['predicted_xy'], {'input': input_tensor})
     
     # 6. UN-STANDARDIZE THE PREDICTION
     scaled_pred = outputs[0][0] 
     real_x = float((scaled_pred[0] * std[0]) + mean[0])
     real_y = float((scaled_pred[1] * std[1]) + mean[1])
     
-    end_time = time.perf_counter()  # <--- STEP 3: Stop timer
+    end_time = time.perf_counter()
     elapsed_ms = (end_time - start_time) * 1000.0  # Convert to milliseconds
     
     # 7. Format as a 2D nested list containing: [[X, Y, Time_ms]]
-    prediction_2d = [[real_x, real_y, elapsed_ms]]  # <--- STEP 4: Add time to output
+    prediction_2d = [[real_x, real_y, elapsed_ms]]
     
     return prediction_2d
