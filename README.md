@@ -17,7 +17,8 @@ This method uses LabVIEW's built in blocks to use python code. This are the Open
 </div>
 
 - Ivan's method
-  NOTE: This code does not work correctly yet, it does not predict correctly, problem related to the shape in which the ONNX file recieves the input
+
+  **NOTE: This code does not work correctly yet, it does not predict correctly, problem related to the shape in which the ONNX file recieves the input**
     * Requirements:
         + [Ivan's repository link](https://github.com/IvanLisRus/LabVIEW-ONNX_Runtime)
         + 64 bit LabVIEW
@@ -40,4 +41,4 @@ This specific code is designed to be able to use 32 bit LabVIEW with 64 bit Pyth
     <img width="65%" height="65%" alt="Image" src="https://github.com/user-attachments/assets/6b2ff45c-3589-40b5-b947-0c5c616ee1ae" />
 </div>
 
-Finally, always remember to change the file path when necessary, as the current codes have all the paths for my own specific computer, and your own will have different paths
+**Finally, always remember to change the file path when necessary, as the current codes have all the paths for my own specific computer, and your own will have different paths**
