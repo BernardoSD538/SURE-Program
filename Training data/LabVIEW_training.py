@@ -139,7 +139,7 @@ def main():
         export_params=True, 
         opset_version=18,
         do_constant_folding=True,
-        input_names=['input_trajectory'], 
+        input_names=['input'], 
         output_names=['predicted_xy']
     )
 
