@@ -17,8 +17,6 @@ This method uses LabVIEW's built in blocks to use python code. This are the Open
 </div>
 
 - Ivan's method
-
-  **NOTE: This code does not work correctly yet, it does not predict correctly, problem related to the shape in which the ONNX file recieves the input**
     * Requirements:
         + [Ivan's repository link](https://github.com/IvanLisRus/LabVIEW-ONNX_Runtime)
         + 64 bit LabVIEW
